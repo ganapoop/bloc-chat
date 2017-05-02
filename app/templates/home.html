@@ -2,6 +2,13 @@
     <h1>Bloc Chat</h1>
     <button ng-click="home.addRoom()">New Room</button>
     <div ng-repeat="room in home.rooms">
-         <h3>{{ room.name }}</h3>
+         <h3 class="room-name" ng-click="home.setCurrentRoom(room)">{{ room.$value }}</h3>
    </div>
+</div>
+   <div class="chat-section">
+    <div class="messages" ng-repeat="message in home.messages">
+        <div class="username">{{ message.username }}</div>
+        <div class="timestamp">{{ message.sentAt }}</div>
+        <div class="user-message">{{ message.content }}</div>
+    </div>
  </div>

@@ -1,8 +1,20 @@
 .side-bar {
      background-color: lightgray;
      position: fixed;
-     width: 40%;
+     width: 25%;
      top: 0px;
      left: 0px;
      height: 100%;
  }
+
+.chat-section {
+     text-align: center;
+}
+
+.username {
+     font-size: 2rem;
+}
+
+.room-name {
+     cursor: pointer;
+}
