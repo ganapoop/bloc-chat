@@ -1,14 +1,26 @@
 <div class="side-bar">
+   <div class="side-bar-title">
     <h1>Bloc Chat</h1>
+   </div>
     <button ng-click="home.addRoom()">New Room</button>
     <div ng-repeat="room in home.rooms">
-         <h3 class="room-name" ng-click="home.setCurrentRoom(room)">{{ room.$value }}</h3>
+         <h3 class="text-capitalize room-name" ng-click="home.setCurrentRoom(room)">{{ room.$value }}</h3>
    </div>
 </div>
    <div class="chat-section">
-    <div class="messages" ng-repeat="message in home.messages">
+    <div class="messages">
+      <div class="text-capitalize messages-header">
+            <h3>{{ home.currentRoom.$value }}</h3>
+      </div>
+
+      <div class="messages-body" ng-class="{'blue-background': $even}" ng-repeat="message in home.messages">
         <div class="username">{{ message.username }}</div>
-        <div class="timestamp">{{ message.sentAt }}</div>
+        <div class="timestamp">{{ message.sentAt | date:'h:mm a' }}</div>
         <div class="user-message">{{ message.content }}</div>
-    </div>
- </div>
+     </div>
+
+    <div class="message-field">
+      <input type="text" name="input" placeholder="Write your message here..." class="message-box" ng-model="home.newMessage.content">
+      <button class="btn btn-send" type="button" ng-click="home.sendMessage()">Send</button>
+   </div>
+</div>
