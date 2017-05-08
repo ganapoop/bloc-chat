@@ -1,21 +1,34 @@
-.side-bar {
-     background-color: lightgray;
-     position: fixed;
-     width: 25%;
-     top: 0px;
-     left: 0px;
-     height: 100%;
- }
-
 .chat-section {
-     text-align: center;
+     width: 75%;
+     float: right;
+}
+
+.messages-body {
+     padding: 0 15px;
+}
+
+.blue-background {
+     background-color: #ebf0fa;
 }
 
 .username {
      font-size: 2rem;
-
 }
 
-.room-name {
-     cursor: pointer;
+.messages-header {
+     padding: 10px;
+}
+
+.timestamp {
+     float: right;
+}
+.message-box {
+     width: 1001px;
+}
+.user-message {
+     padding: 10px;
+}
+
+.btn-send {
+     color: black;
 }

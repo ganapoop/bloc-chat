@@ -1,0 +1,14 @@
+.side-bar {
+     background-color: lightgray;
+     position: fixed;
+     width: 25%;
+     top: 0px;
+     left: 0px;
+     height: 100%;
+     padding: 10px;
+     border: 10px;
+ }
+
+ .room-name {
+      cursor: pointer;
+ }
